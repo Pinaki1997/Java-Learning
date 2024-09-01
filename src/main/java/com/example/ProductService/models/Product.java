@@ -1,15 +1,19 @@
 package com.example.ProductService.models;
 
-import lombok.Getter;
-import lombok.Setter;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import lombok.Data;
 
-@Setter
-@Getter
+@Data
+@Entity(name = "products")
 public class Product {
-    int id;
-    String name;
-    double price;
-    String description;
-    String category;
-    String image;
+
+    @Id
+    private String id;
+
+    private String name;
+    private double price;
+    private String description;
+    private String category;
+    private String image;
 }
