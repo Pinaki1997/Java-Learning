@@ -15,5 +15,4 @@ public interface ProductRepository extends JpaRepository<Product, Long> {
     Product findById(String id);
 
     Product findFirstByNameAndCategoryAndIdNot(String name, String category, String id);
-
 }
